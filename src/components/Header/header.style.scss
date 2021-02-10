@@ -9,6 +9,7 @@
    border-bottom: 1px solid $header-border-color;
    min-height: $header-height;
    padding: 20px 0;
+
    @include breakpoint(640px) {
       flex-direction: row;
       justify-content: space-between;

@@ -24,6 +24,8 @@
       margin-bottom: 24px;
       transition: 0.2s ease-in-out;
       cursor: pointer;
+      max-height: 200px;
+      overflow: auto;
       @extend %fadeInAnimation;
 
       & > p:not(last-child) {
