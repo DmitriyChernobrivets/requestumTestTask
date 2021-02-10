@@ -24,8 +24,7 @@
       margin-bottom: 24px;
       transition: 0.2s ease-in-out;
       cursor: pointer;
-      max-height: 200px;
-      overflow: auto;
+
       @extend %fadeInAnimation;
 
       & > p:not(last-child) {
@@ -42,6 +41,22 @@
    }
    &-description {
       word-break: break-word;
+      max-height: 150px;
+      overflow: auto;
+
+      &::-webkit-scrollbar {
+         width: 0.2em;
+         visibility: hidden;
+      }
+      &::-webkit-scrollbar-track {
+         box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+
+      }
+      &::-webkit-scrollbar-thumb {
+         background-color: darkgrey;
+         outline: 1px solid slategrey;
+
+      }
    }
    &-name {
       font-size: 1.2em;
