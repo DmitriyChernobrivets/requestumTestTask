@@ -1,0 +1,40 @@
+{
+   "parser": "@typescript-eslint/parser",
+   "parserOptions": {
+      "sourceType": "module",
+      "allowImportExportEverywhere": false,
+      "codeFrame": false
+   },
+   "extends": [
+      "prettier",
+      "plugin:jsx-a11y/recommended",
+      "plugin:react-hooks/recommended"
+   ],
+   "env": {
+      "browser": true,
+      "jest": true
+   },
+   "plugins": ["react-hooks", "jsx-a11y", "import"],
+   "rules": {
+//      "max-len": ["warn", { "code": 100 }],
+      "prefer-promise-reject-errors": ["off"],
+      "react/jsx-filename-extension": ["off"],
+      "no-return-assign": ["off"],
+      "jsx-a11y/rule-name": 0,
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "import/no-unresolved": "error"
+   },
+   "settings": {
+      "import/parsers": {
+         "@typescript-eslint/parser": [".ts", ".tsx"]
+      },
+      "import/resolver": {
+         // use <root>/tsconfig.json
+         "typescript": {
+            "project": ".",
+            "alwaysTryTypes": true // always try to resolve types under `<root>@types` directory even it doesn't contain any source code, like `@types/unist`
+         }
+      }
+   }
+}

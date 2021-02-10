@@ -1,0 +1,33 @@
+@import "../../styles/mixins";
+.result-not-found {
+   text-align: center;
+  @include breakpoint(768px) {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+  }
+   & > .image-wrapper {
+
+     img {
+       height: 200px;
+       margin: 0 auto;
+     }
+   }
+}
+.welcome-wrapper {
+  @include breakpoint(768px) {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+  }
+  .welcome-image-panda {
+    height: 200px;
+    //margin: 0 auto;
+  }
+  .welcome-image-text {
+    height: 100px;
+  }
+  img {
+    margin: 0 auto;
+  }
+}

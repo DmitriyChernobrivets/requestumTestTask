@@ -1,0 +1,13 @@
+.input {
+  border: unset;
+  font-size: 14px;
+  padding: 9px 14px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  width: 100%;
+  transition: 0.2s ease-out;
+  &:focus {
+    transform: scale(1.02);
+    transition: 0.1s ease-out;
+  }
+}

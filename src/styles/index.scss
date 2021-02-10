@@ -1,0 +1,9 @@
+@import 'variables';
+@import '../components/layout.style';
+@import 'main';
+@import './src/components/Header/header.style';
+@import './src/components/History/history.style';
+@import './src/components/Preloader/preloader.style';
+@import './src/components/Repos/repos.style';
+@import './src/components/Input/input.style';
+@import './src/components/Errors/notfound.stele';

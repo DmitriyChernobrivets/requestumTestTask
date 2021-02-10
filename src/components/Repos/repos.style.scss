@@ -1,0 +1,53 @@
+@import '../../styles/mixins';
+@import '../../styles/variables';
+.repos {
+   position: relative;
+   @include breakpoint(768px) {
+      width: 69%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+   }
+
+   &-item {
+      width: 100%;
+
+      @include breakpoint(1024px) {
+         width: 48%;
+      }
+
+      border-radius: 14px;
+      padding: 15px 20px;
+      background: $font-color--white;
+      color: $font-color--black;
+      min-height: 1px;
+      margin-bottom: 24px;
+      transition: 0.2s ease-in-out;
+      cursor: pointer;
+      @extend %fadeInAnimation;
+
+      & > p:not(last-child) {
+         margin-bottom: 15px;
+      }
+      &:hover {
+         transform: scale(1.05);
+         transition: 0.2s ease-in-out;
+      }
+   }
+   &-lang span,
+   &-description span {
+      font-weight: 600;
+   }
+   &-description {
+      word-break: break-word;
+   }
+   &-name {
+      font-size: 1.2em;
+      font-weight: bold;
+      @extend %eclipseText;
+   }
+   .welcome-image-text {
+      height: 100px;
+      margin: 0 auto;
+   }
+}

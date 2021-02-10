@@ -1,0 +1,11 @@
+@import '../../styles/mixins';
+
+.history {
+   margin-bottom: 20px;
+   @include breakpoint(768px) {
+      margin-bottom: 0;
+   }
+   &-title {
+      margin-bottom: 15px;
+   }
+}

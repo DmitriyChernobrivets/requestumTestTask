@@ -1,0 +1,33 @@
+@import '../styles/mixins';
+@import '../styles/variables';
+
+.container {
+   padding: 0 20px;
+   width: 100%;
+   margin: 0 auto;
+   @include breakpoint(640px) {
+      max-width: 576px;
+   }
+   @include breakpoint(768px) {
+      max-width: 700px;
+   }
+   @include breakpoint(1024px) {
+      max-width: 900px;
+   }
+   @include breakpoint(1200px) {
+      max-width: 1124px;
+   }
+   & > .main {
+      color: $font-color--white;
+      padding: 20px 0;
+      @include breakpoint(768px) {
+         display: flex;
+         justify-content: space-between;
+      }
+      .left-block {
+         @include breakpoint(768px) {
+            width: 29%;
+         }
+      }
+   }
+}
